@@ -28,6 +28,9 @@ When working on this project:
 
 For comprehensive coding standards, refer to the instruction files in the `/docs` directory. ALWAYS refer to the relevant .md file BEFORE generating any code:
 
+- **[Authentication](docs/authentication.md)** - Clerk authentication standards, protected routes, and modal-based sign-in/sign-up
+- **[UI Components](docs/ui-components.md)** - shadcn/ui component standards and composition patterns
+
 ## Core Principles
 
 1. **Type Safety**: Leverage TypeScript strictly; avoid `any` types
