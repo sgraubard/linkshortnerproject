@@ -1,14 +1,8 @@
 import type { Metadata } from 'next';
-import {
-  ClerkProvider,
-  Show,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Link2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { HeaderButtons } from '@/components/header-buttons';
 import './globals.css';
 
 const geistSans = Geist({
@@ -23,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'LinkShort – Shorten Links, Share Everywhere',
-  description: 'Create short, memorable links in seconds. Track clicks, manage your links, and share with confidence.',
+  description:
+    'Create short, memorable links in seconds. Track clicks, manage your links, and share with confidence.',
 };
 
 export default function RootLayout({
@@ -43,19 +38,7 @@ export default function RootLayout({
               LinkShort
             </div>
             <div className="flex items-center gap-3">
-              <Show when="signed-out">
-                <SignInButton mode="modal">
-                  <Button variant="ghost">Sign in</Button>
-                </SignInButton>
-              </Show>
-              <Show when="signed-out">
-                <SignUpButton mode="modal">
-                  <Button>Sign up</Button>
-                </SignUpButton>
-              </Show>
-              <Show when="signed-in">
-                <UserButton />
-              </Show>
+              <HeaderButtons />
             </div>
           </header>
           {children}
