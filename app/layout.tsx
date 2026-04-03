@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import {
   ClerkProvider,
-  Show,
+  SignedIn,
+  SignedOut,
   SignInButton,
   SignUpButton,
   UserButton,
@@ -37,19 +38,19 @@ export default function RootLayout({
       >
         <ClerkProvider>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <Show when="signed-out">
+            <SignedOut>
               <SignInButton mode="modal">
                 <Button variant="ghost">Sign in</Button>
               </SignInButton>
-            </Show>
-            <Show when="signed-out">
+            </SignedOut>
+            <SignedOut>
               <SignUpButton mode="modal">
                 <Button>Sign up</Button>
               </SignUpButton>
-            </Show>
-            <Show when="signed-in">
+            </SignedOut>
+            <SignedIn>
               <UserButton />
-            </Show>
+            </SignedIn>
           </header>
           {children}
         </ClerkProvider>
