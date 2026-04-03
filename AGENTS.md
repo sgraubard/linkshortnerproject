@@ -13,6 +13,21 @@ A modern URL shortener built with:
 - **Styling**: Tailwind CSS 4 with shadcn/ui components
 - **Icons**: Lucide React
 
+## ⚠️ CRITICAL: Read Instructions BEFORE Coding
+
+**MANDATORY WORKFLOW**: Before generating ANY code, you MUST:
+
+1. **Identify the domain** - Determine which area of the codebase you'll be working in (authentication, UI, database, etc.)
+2. **Read the instruction file** - Use the `read_file` tool to load the relevant instruction file from `/docs`
+3. **Follow the standards** - Implement code according to the specifications in that file
+
+**Available Instruction Files:**
+
+- **[Authentication](docs/authentication.md)** - Clerk authentication standards, protected routes, and modal-based sign-in/sign-up
+- **[UI Components](docs/ui-components.md)** - shadcn/ui component standards and composition patterns
+
+**NEVER skip this step.** These files contain critical project-specific patterns, conventions, and configurations that must be followed for consistency and correctness.
+
 ## Quick Start for AI Assistants
 
 When working on this project:
@@ -23,13 +38,6 @@ When working on this project:
 4. Apply Tailwind CSS classes directly (utility-first approach)
 5. Leverage shadcn/ui components from `/components/ui`
 6. Ensure authentication checks via Clerk where needed
-
-## Detailed Instructions
-
-For comprehensive coding standards, refer to the instruction files in the `/docs` directory. ALWAYS refer to the relevant .md file BEFORE generating any code:
-
-- **[Authentication](docs/authentication.md)** - Clerk authentication standards, protected routes, and modal-based sign-in/sign-up
-- **[UI Components](docs/ui-components.md)** - shadcn/ui component standards and composition patterns
 
 ## Core Principles
 

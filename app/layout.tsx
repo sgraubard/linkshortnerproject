@@ -7,6 +7,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Button } from '@/components/ui/button';
 import './globals.css';
 
 const geistSans = Geist({
@@ -30,17 +31,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ClerkProvider>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
-              <SignInButton mode="modal" />
+              <SignInButton mode="modal">
+                <Button variant="ghost">Sign in</Button>
+              </SignInButton>
             </Show>
             <Show when="signed-out">
-              <SignUpButton />
+              <SignUpButton mode="modal">
+                <Button>Sign up</Button>
+              </SignUpButton>
             </Show>
             <Show when="signed-in">
               <UserButton />
