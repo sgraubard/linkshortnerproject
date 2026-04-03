@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ClerkProvider } from '@clerk/nextjs';
+import { shadcn } from '@clerk/themes';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Link2 } from 'lucide-react';
 import { HeaderButtons } from '@/components/header-buttons';
@@ -31,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClerkProvider>
+        <ClerkProvider appearance={{ baseTheme: shadcn }}>
           <header className="flex justify-between items-center px-6 py-4 h-16 border-b border-border">
             <div className="flex items-center gap-2 font-semibold text-sm">
               <Link2 className="size-4 text-primary" />
